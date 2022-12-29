@@ -1,0 +1,36 @@
+﻿
+@model Offer
+
+@{
+    ViewData["Title"] = "Accept";
+}
+<h2>are you sure you want to accept the offer</h2>
+
+<form action="/Offer/accept/@Model.OfferId" method="post">
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label for="Date">Date</label>
+            <input type="hidden" name="OfferId" value="@Model.OfferId" />
+            <input type="text" readonly class="form-control" id="Date" name="Date" placeholder="Date" value="@Model.Date">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Accept">Accept</label>
+            <input type="text" readonly class="form-control" id="Accept" name="Accept" placeholder="Accept" value="1">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="ParId">Parent Id</label>
+            <input type="text" readonly class="form-control" id="ParId" name="ParId" placeholder="ParId" value="@Model.ParId">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="TutId">Parent Id</label>
+            <input type="text" readonly class="form-control" id="TutId" name="TutId" placeholder="TutId" value="@Model.TutId">
+        </div>
+
+
+    </div>
+    
+
+    <button type="submit" class="btn btn-success">Yes</button>
+    <a class="btn btn-danger" href="/TutorHome/Index">No</a> @*<-- should be modified to the home page of the user>*@
+</form>

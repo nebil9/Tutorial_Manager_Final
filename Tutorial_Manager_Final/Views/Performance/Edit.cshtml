@@ -1,0 +1,26 @@
+﻿
+@model Performance
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<h2>Edit Performance</h2>
+
+<form action="/Performance/edit/@Model.PerformanceId" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="Performance">Performance</label>
+            <input type="hidden" name="PerformanceId" value="@Model.PerformanceId" />
+            <input type="text" class="form-control" id="Performance" name="Performance" placeholder="Performance" value="@Model.Performance1">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Date">Date</label>
+            <input type="text" class="form-control" id="Date" name="Date" placeholder="Date" value="@Model.Date">
+        </div>
+
+    </div>
+    
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a class="btn btn-danger" href="#">Cancel</a> @*<-- should be modified to the home page of the user>*@
+</form>

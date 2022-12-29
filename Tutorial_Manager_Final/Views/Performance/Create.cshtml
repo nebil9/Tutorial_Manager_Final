@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Student Performance";
+}
+
+<h2>Add Performance</h2>
+<form action="/Performance/create" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="Performance">Performance</label>
+            <input type="text" class="form-control" id="Performance" name="Performance" placeholder="Performance">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="Date">Date</label>
+            <input type="text" class="form-control" id="Date" name="Date" placeholder="Date">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="StuId">Student</label>
+            <input type="text" class="form-control" id="StuId" name="StuId" placeholder="StuId">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="TutId">Tutorial</label>
+            <input type="text" class="form-control" id="TutId" name="TutId" placeholder="TutId">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Send</button>
+    <a class="btn btn-danger" href="#">Cancel</a>
+</form>
+
+
+
+

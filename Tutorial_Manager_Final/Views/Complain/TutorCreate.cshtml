@@ -1,0 +1,31 @@
+﻿
+@{
+    int index = ViewBag.index;
+    ViewData["Title"] = "Complain";
+}
+
+<h2>Send Complain</h2>
+<form action="/Complain/TutorCreate" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="Complain">Complain</label>
+            <input type="text" class="form-control" id="Complain" name="Complain"  placeholder="Complain">
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" readonly class="form-control" hidden id="StuId" name="StuId" placeholder="StuId" value="">
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" readonly class="form-control" hidden id="ParId" name="ParId" placeholder="ParId" value="">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="TutId">Tutor Id</label>
+            <input type="text" readonly class="form-control" id="TutId" name="TutId" placeholder="TutId" value="@index">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Send</button>
+    <a class="btn btn-danger" href="./Index">Cancel</a>
+</form>
+
+
+

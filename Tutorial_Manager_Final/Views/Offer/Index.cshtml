@@ -1,0 +1,34 @@
+﻿@model List<Tutorial_Manager_Final.Models.Offer>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+    <tr>
+        <th>Offer ID</th>
+        <th>Date</th>
+        <th>Parent Id</th>@* should be modified with names*@
+        <th>Accept</th>  
+         <th>Reject</th> 
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.OfferId</td>
+    <td>@item.Date</td>
+    <td>@item.ParId</td>
+
+
+    <td>
+        <a href="/Offer/accept/@item.OfferId" class=" btn btn-outline-info">Accept</a>
+    </td>
+
+    <td>
+        <a href="/Offer/Reject/@item.OfferId" class=" btn btn-outline-info">Reject</a>
+    </td>
+
+</tr>
+    }
+</table>
+
+

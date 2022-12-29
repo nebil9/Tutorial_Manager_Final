@@ -1,0 +1,33 @@
+﻿@model List<Tutorial_Manager_Final.Models.Performance>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+    <tr>
+        <th>Performance ID</th>
+        <th>Performance</th>
+        <th>Date</th>
+        <th>Student Id</th>@* should be modified with names*@
+        <th>Tutor Id</th>  
+         <th>Details</th> 
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.PerformanceId</td>
+    <td>@item.Performance1</td>
+    <td>@item.Date</td>
+    <td>@item.StuId</td>
+    <td>@item.TutId</td>
+
+    <td>
+        <a href="/performance/details/@item.PerformanceId" class=" btn btn-outline-info">Details</a>
+    </td>
+
+
+</tr>
+    }
+</table>
+
+

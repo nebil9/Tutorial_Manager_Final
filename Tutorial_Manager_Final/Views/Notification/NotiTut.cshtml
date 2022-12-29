@@ -1,0 +1,27 @@
+﻿@model List<Tutorial_Manager_Final.Models.Notification>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+    <tr>
+        <th>Notification ID</th>
+        <th>Notification</th>
+        <th>Date</th>
+        <th>Tutorial Id</th>@* should be modified with names*@
+
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.NotificationId</td>
+    <td>@item.Notification1</td>
+    <td>@item.Date</td>
+    <td>@item.TutId</td>
+
+
+</tr>
+    }
+</table>
+
+
